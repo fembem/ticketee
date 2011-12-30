@@ -10,7 +10,7 @@ before_filter :find_ticket, :only => [:show,
                                       ]
 
 before_filter :authorize_create!, :only => [:new, :create]
-
+before_filter :authorize_update!, :only => [:edit, :update]
 
   def destroy
     @ticket.destroy
@@ -60,7 +60,6 @@ before_filter :authorize_create!, :only => [:new, :create]
         redirect_to root_path
     end
 
-
     def find_ticket
       @ticket = @project.tickets.find(params[:id])
     end
@@ -71,6 +70,14 @@ before_filter :authorize_create!, :only => [:new, :create]
         redirect_to @project
       end
     end
+    
+    def authorize_update!
+      if !current_user.admin? && cannot?(:"edit tickets", @project)
+        flash[:alert] = "You cannot edit tickets on this project."
+        redirect_to @project
+      end
+    end
+
 
 
 end
