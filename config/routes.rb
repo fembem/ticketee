@@ -72,6 +72,10 @@ MyProject::Application.routes.draw do
   
   resources :files
 
+  resources :tickets do
+    resources :comments
+  end
+
   
   namespace :admin do
     root :to => "base#index"
