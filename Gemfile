@@ -33,13 +33,13 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
+  gem 'factory_girl'
 end
 
 group :test do
   gem 'cucumber-rails', '1.0.6'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl'
   gem 'email_spec'
   gem 'launchy', '~> 2.0.5'
 end
