@@ -34,6 +34,8 @@ gem 'jquery-rails'
 group :test, :development do
   gem 'rspec-rails', '~> 2.5'
   gem 'factory_girl'
+  gem 'spork', '~> 0.9.0.rc'
+  gem 'database_cleaner'
 end
 
 group :test do
