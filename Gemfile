@@ -44,6 +44,7 @@ group :test do
   gem 'database_cleaner'
   gem 'email_spec'
   gem 'launchy', '~> 2.0.5'
+  gem 'selenium-webdriver', '~> 2.33.0'
 end
 
 gem 'devise', '~> 1.4.3'
