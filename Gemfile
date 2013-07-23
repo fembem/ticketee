@@ -55,3 +55,4 @@ gem 'paperclip'
 gem 'execjs'
 gem 'therubyracer'
 
+gem 'fembem-forem', :require => "forem"

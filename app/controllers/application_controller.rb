@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   
   private 
 
+    def method_in_main_app
+    end
+
     def authorize_admin!
       authenticate_user!
       unless current_user.admin?

@@ -102,5 +102,6 @@ MyProject::Application.routes.draw do
     :to => 'admin/permissions#update',
     :as => :update_user_permissions
 
-  
+  mount Forem::Engine, :at => "/forem"
+
 end
